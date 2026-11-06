@@ -1,1 +1,5 @@
-# -pampers-media-dashboard
+# 媒体追踪看板 · 加密快照
+
+GitHub Pages部署目录为docs，采用GitHub Actions发布。仓库只包含加密数据，不包含数据库凭据或明文看板。每次打开需输入口令，浏览器使用PBKDF2-SHA256（600000轮）及AES-256-GCM解密；口令不保存在浏览器。
+
+数据更新由管理员在本机重新生成docs/index.html后提交。公开加密文件可以被离线尝试口令，建议使用足够长的独立口令。本版本不能直接访问公司内网MySQL。
